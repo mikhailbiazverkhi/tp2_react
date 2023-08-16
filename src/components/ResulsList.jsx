@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 // import Coffee from "./Coffee";
 
-function ResultsList({ type }) {
+function ResultsList({ type = "coffees" }) {
   const [products, setProducts] = useState([]);
 
   const COFFEES = "coffees";

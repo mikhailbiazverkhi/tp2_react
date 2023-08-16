@@ -2,7 +2,7 @@
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Header({ changeType }) {
+function Header() {
   return (
     <header>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -12,8 +12,10 @@ function Header({ changeType }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
+            {/* <Nav.Link>Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -25,13 +27,14 @@ function Header({ changeType }) {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/" onClick={() => changeType("product-categories")}>
-              Categories
-            </Nav.Link>
+            <Nav.Link>Categories</Nav.Link> */}
+            <Link className="nav-link" to="/products/">
+              Products
+            </Link>
 
-            <Nav.Link onClick={() => changeType("coffees")}>
+            <Link className="nav-link" to="/coffees/">
               Coffees
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
